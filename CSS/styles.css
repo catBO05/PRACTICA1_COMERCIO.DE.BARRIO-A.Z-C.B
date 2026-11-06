@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+ :root {
+  --White: #FFFDF6;
+
+  --Black: #1A1A1A;
+  
+  --Rojito: #b60747;
+
+  --crema: #FFF0BD;
+}
+
+
+/* BODY */
+
+
+h1, h2{
+  font-family: 'Henny Penny', cursive;
+  letter-spacing: 1px;
+}
+
+h2, h3 {
+  font-family: 'Concert One', serif;
+  letter-spacing: 1px;
+}
+
+h4, h5, h6, p, a, span, li {
+  font-family: 'Mukta Malar', sans-serif;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: var(--crema);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
