@@ -1,0 +1,13 @@
+@layer theme, base, components, utilities;
+
+@layer base {
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        scroll-behavior: smooth;
+        overflow: hidden;
+        list-style: none;
+    }
+}
