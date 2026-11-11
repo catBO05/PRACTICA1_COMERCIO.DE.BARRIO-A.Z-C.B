@@ -8,12 +8,11 @@
     <link rel="icon" href="MEDIA/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="script" href="JS/script.js">
-<<<<<<< HEAD
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Henny+Penny&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -22,7 +21,7 @@
             --color-blanco: #FFFDF6;
             --color-detalles: #b60747;
 
-            --font-Logo: "Henny Penny", cursive;
+            --font-logo: "Henny Penny", cursive;
             --font-titulos: "Concert One" serif;
             --font-textos: "Mukta Malar" sans-serif;
         }
@@ -30,11 +29,50 @@
 </head>
 
 <body class="bg-blanco">
-=======
-</head>
+    <header class="sticky top-0 z-20 border-b bg-blanco backdrop-blur text-negro">
+        <div class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-6 px-6 py-4 lg:px-10">
+            <a href="#inicio" class="font-logo text-xl leading-tight font-bold md:text-2xl">Rincón Latino</a>
 
-<body>
->>>>>>> 8fa868b09694488b2b524a47417d13b5a2772b4e
-    
+            <div class="flex items-center gap-5 md:order-last">
+                <div class="flex items-center gap-7 mr-2">
+                    <a href="#" title="Mi Perfil" class="text-2xl transition-colors duration-300 hover:text-detalles">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </a>
+                    <a href="#" title="Carrito" class="text-2xl transition-colors duration-300 hover:text-detalles">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <!-- CLARO-OSCURO -->
+                <button id="boton-tema" type="button" aria-pressed="false" class="rounded-full border border-borde px-3 py-3 text-sm md:px-4 font-semibold hover:border-blanco hover:text-blanco">⏾</button>
+
+                <!-- MENU RESPONSIVE -->
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" class="rounded-full bg-detalles px-3 py-2 text-sm font-semibold text-fondo md:hidden"> Menú </button>
+            </div>
+
+            <nav class="w-full md:ml-30rem md:w-auto" aria-label="Principal">
+                <ul id="menu" class="hidden font-titulos font-semibold space-y-1 pb-2 md:flex md:gap-8 md:space-y-0 md:pb-0">
+                    <li><a href="#" class="enlace-menu block py-2">PAÍSES</a></li>
+                    <li><a href="#" class="enlace-menu block py-2">NOVEDADES</a></li>
+                    <li><a href="#" class="enlace-menu block py-2">DULCES</a></li>
+                    <li><a href="#" class="enlace-menu block py-2">SALADOS</a></li>
+                </ul>
+            </nav>
+
+            <div class="p-2">
+                <input type="text" placeholder="Buscar" id="search-input" class="w-full max-w-xs sm:max-w-sm bg-negro text-blanco text-left rounded-full border-none outline-none py-1.5 pl-20 pr-4 placeholder-gray-400 focus:ring-gray-500 transition-all">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+
+        </section>
+    </main>
+
+    <footer>
+        
+    </footer>
 </body>
 </html>
