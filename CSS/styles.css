@@ -11,3 +11,45 @@
         list-style: none;
     }
 }
+
+@layer components {
+    .linea {
+        position: relative;
+        font-weight: 500;
+    }
+
+    .linea::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0.2rem;
+        width: 0;
+        height: 2px;
+        background: var(--color-detalles);
+        transition: width 0.5s ease;
+    }
+
+    .linea:hover::after {
+        width: 100%;
+    }
+
+    .linea-titulo {
+        position: relative;
+        font-weight: 500;
+    }
+
+    .linea-titulo::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0.2rem;
+        width: 0;
+        height: 3px;
+        background: var(--color-detalles);
+        transition: width 0.5s ease;
+    }
+
+    .linea-titulo:hover::after {
+        width: 100%;
+    }
+}
