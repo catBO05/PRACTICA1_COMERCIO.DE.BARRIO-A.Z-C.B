@@ -1,90 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Rincón Latino</title>
-    <link href="CSS/styles.css" rel="Stylesheet" type="text/css">
-    <link rel="icon" href="MEDIA/favicon-16x16.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="script" href="JS/script.js">
+    <link href="CSS/styles.css" rel="Stylesheet" type="text/css" />
+    <link rel="icon" href="MEDIA/favicon-16x16.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="script" href="JS/script.js" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Henny+Penny&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Henny+Penny&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-        @theme static {
-            --color-negro: #1A1A1A;
-            --color-blanco: #FFFDF6;
-            --color-detalles: #b60747;
+      @theme static {
+        --color-negro: #1a1a1a;
+        --color-blanco: #fffdf6;
+        --color-detalles: #b60747;
 
-            --font-logo: "Henny Penny", cursive;
-            --font-titulos: "Concert One" serif;
-            --font-textos: "Mukta Malar" sans-serif;
-        }
+        --font-logo: "Henny Penny", cursive;
+        --font-titulos: "Concert One" serif;
+        --font-textos: "Mukta Malar" sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-blanco">
-    <header class="sticky top-0 z-20 border-b bg-blanco backdrop-blur text-negro">
-        <div class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-6 px-6 py-4 lg:px-10">
-            <a href="#inicio" class="font-logo text-xl leading-tight font-bold md:text-2xl">Rincón Latino</a>
+  <body class="bg-blanco">
+    <header
+      class="sticky top-0 z-20 border-b bg-blanco backdrop-blur text-negro"
+    >
+      <div
+        class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-6 px-6 py-4 lg:px-10"
+      >
+        <a
+          href="#inicio"
+          class="font-logo text-xl leading-tight font-bold md:text-2xl"
+          >Rincón Latino</a
+        >
 
-            <div class="flex items-center gap-5 md:order-last">
-                <div class="flex items-center gap-7 mr-2">
-                    <a href="#" title="Mi Perfil" class="text-2xl transition-colors duration-300 hover:text-detalles">
-                        <i class="fa-solid fa-circle-user"></i>
-                    </a>
-                    <a href="#" title="Carrito" class="text-2xl transition-colors duration-300 hover:text-detalles">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </div>
+        <div class="flex items-center gap-5 md:order-last">
+          <div class="flex items-center gap-7 mr-2">
+            <a
+              href="#"
+              title="Mi Perfil"
+              class="text-2xl transition-colors duration-300 hover:text-detalles"
+            >
+              <i class="fa-solid fa-circle-user"></i>
+            </a>
+            <a
+              href="#"
+              title="Carrito"
+              class="text-2xl transition-colors duration-300 hover:text-detalles"
+            >
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
 
-                <!-- CLARO-OSCURO -->
-                <button id="boton-tema" type="button" aria-pressed="false" class="rounded-full border border-borde px-3 py-3 text-sm md:px-4 font-semibold hover:border-blanco hover:text-blanco">⏾</button>
+          <!-- CLARO-OSCURO -->
+          <button
+            id="boton-tema"
+            type="button"
+            aria-pressed="false"
+            class="rounded-full border border-borde px-3 py-3 text-sm md:px-4 font-semibold hover:border-blanco hover:text-blanco"
+          >
+            ⏾
+          </button>
 
-                <!-- MENU RESPONSIVE -->
-                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" class="rounded-full bg-detalles px-3 py-2 text-sm font-semibold text-fondo md:hidden"> Menú </button>
-            </div>
-
-            <nav class="w-full md:ml-30rem md:w-auto" aria-label="Principal">
-                <ul id="menu" class="hidden font-titulos font-semibold space-y-1 pb-2 md:flex md:gap-8 md:space-y-0 md:pb-0">
-                    <li><a href="#" class="enlace-menu block py-2">PAÍSES</a></li>
-                    <li><a href="#" class="enlace-menu block py-2">NOVEDADES</a></li>
-                    <li><a href="#" class="enlace-menu block py-2">DULCES</a></li>
-                    <li><a href="#" class="enlace-menu block py-2">SALADOS</a></li>
-                </ul>
-            </nav>
-
-            <div class="p-2">
-                <input type="text" placeholder="Buscar" id="search-input" class="w-full max-w-xs sm:max-w-sm bg-negro text-blanco text-left rounded-full border-none outline-none py-1.5 pl-20 pr-4 placeholder-gray-400 focus:ring-gray-500 transition-all">
-            </div>
+          <!-- MENU RESPONSIVE -->
+          <button
+            id="boton-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu"
+            class="rounded-full bg-detalles px-3 py-2 text-sm font-semibold text-fondo md:hidden"
+          >
+            Menú
+          </button>
         </div>
+
+        <nav class="w-full md:ml-30rem md:w-auto" aria-label="Principal">
+          <ul
+            id="menu"
+            class="hidden font-titulos font-semibold space-y-1 pb-2 md:flex md:gap-8 md:space-y-0 md:pb-0"
+          >
+            <li><a href="#" class="enlace-menu block py-2">PAÍSES</a></li>
+            <li><a href="#" class="enlace-menu block py-2">NOVEDADES</a></li>
+            <li><a href="#" class="enlace-menu block py-2">DULCES</a></li>
+            <li><a href="#" class="enlace-menu block py-2">SALADOS</a></li>
+          </ul>
+        </nav>
+
+        <div class="p-2">
+          <input
+            type="text"
+            placeholder="Buscar"
+            id="search-input"
+            class="w-full max-w-xs sm:max-w-sm bg-negro text-blanco text-left rounded-full border-none outline-none py-1.5 pl-20 pr-4 placeholder-gray-400 focus:ring-gray-500 transition-all"
+          />
+        </div>
+      </div>
     </header>
 
     <main>
-        <section id="inicio" class="mx-auto max-w-6xl px-5 py-20 md:py-28">
-            <img src="MEDIA/IMG/Header.webp"
-        </section>
+      <section id="inicio" class="mx-auto max-w-6xl px-5 py-20 md:py-28">
+        <img
+          src="MEDIA/IMG/Header.webp"
+          alt="Dulces y salados latinos"
+          class="h-[88vh] min-h-[420px] w-full object-cover"
+        />
+                       
+        <div
+          class="absolute inset-y-0 left-0 flex w-full items-center bg-gradient-to-r from-negro/90 via-negro/70 to-transparent"
+        >
+                         
+          <div class="px-6 text-blanco lg:px-10">
+                               
+            <h1 class="font-logo text-3xl font-bold md:text-6xl">
+              El sabor de Latinoamérica                    
+            </h1>
+                               
+            <p class="mt-3 max-w-md text-sm md:text-lg">
+              Descubre los sabores que nos hacen sentir como en casa. Aquí
+              encontrarás tus dulces, snacks y productos favoritos de
+              Latinoamérica sin salir de España.
+            </p>
+                               
+            <a
+              href="#novedades"
+              class="mt-5 inline-block rounded-full bg-acento px-5 py-2 font-semibold transition-colors duration-300 hover:bg-detalles"
+              >Ver novedades</a
+            >
+                           
+          </div>
+                     
+        </div>
+      </section>
 
-        <section id="novedades">
+      <section id="novedades"></section>
 
-        </section>
+      <section id="dulces"></section>
 
-        <section id="dulces">
-
-        </section>
-
-        <section id="salados">
-
-        </section>
+      <section id="salados"></section>
     </main>
 
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>
