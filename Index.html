@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Rincón Latino</title>
-    <link href="CSS/styles.css" rel="Stylesheet" type="text/css" />
     <link rel="icon" href="MEDIA/favicon-16x16.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="script" href="JS/script.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <script src="JS/script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Henny+Penny&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Henny+Penny&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="CSS/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -28,134 +21,170 @@
         --color-detalles: #b60747;
 
         --font-logo: "Henny Penny", cursive;
-        --font-titulos: "Concert One" serif;
-        --font-textos: "Mukta Malar" sans-serif;
+        --font-titulos: "Concert One", serif;
+        --font-textos: "Mukta Malar", sans-serif;
       }
     </style>
   </head>
 
-  <body class="bg-blanco antialiased transition-colors duration-500">
-    <header
-      class="sticky top-0 z-20 border-b bg-blanco backdrop-blur text-negro"
-    >
-      <div
-        class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-6 px-6 py-4 lg:px-10"
-      >
-        <a
-          href="#inicio"
-          class="font-logo text-xl leading-tight font-bold md:text-2xl linea-titulo py-1"
-          >Rincón Latino</a
-        >
+<body class="bg-blanco antialiased transition-colors duration-500">
+    <header class="sticky top-0 z-20 border-b bg-blanco backdrop-blur text-negro">
+        <div class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-6 px-6 py-4 lg:px-10">
+            <a href="#inicio" class="font-logo text-xl leading-tight font-bold md:text-2xl linea-titulo py-1">Rincón Latino</a>
 
-        <div class="flex items-center gap-5 md:order-last">
-          <div class="flex items-center gap-7 mr-2">
-            <a
-              href="#"
-              title="Mi Perfil"
-              class="text-3xl transition-colors duration-300 hover:text-detalles"
-            >
-              <i class="fa-solid fa-circle-user"></i>
-            </a>
-            <a
-              href="#"
-              title="Carrito"
-              class="text-3xl transition-colors duration-300 hover:text-detalles"
-            >
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </div>
+            <div class="flex items-center gap-5 md:order-last">
+                <div class="flex items-center gap-7 mr-2">
+                    <a href="#" title="Mi Perfil" class="text-3xl transition-colors duration-300 hover:text-detalles">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </a>
+                    <a href="#" title="Carrito" class="text-3xl transition-colors duration-300 hover:text-detalles">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
 
-          <!-- CLARO-OSCURO FALTA FUNCIONAR-->
-          <button
-            id="boton-tema"
-            type="button"
-            aria-pressed="false"
-            class="rounded-full border border-borde px-3 py-3 text-sm md:px-4 font-semibold transition-colors duration-300 hover:bg-negro hover:text-blanco"
-          >
-            ⏾
-          </button>
 
-          <!-- MENU RESPONSIVE FALTA FUNCIONAR-->
-          <button
-            id="boton-menu"
-            type="button"
-            aria-expanded="false"
-            aria-controls="menu"
-            class="rounded-full bg-detalles px-3 py-2 text-sm font-semibold text-fondo md:hidden"
-          >
-            Menú
-          </button>
+                <!-- CLARO-OSCURO FALTA FUNCIONAR-->
+                <button id="boton-tema" type="button" aria-pressed="false" class="rounded-full border border-borde px-3 py-3 text-sm md:px-4 font-semibold transition-colors duration-300 hover:bg-negro hover:text-blanco">⏾</button>
+
+
+                <!-- MENU RESPONSIVE FALTA FUNCIONAR-->
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu" class="rounded-full bg-detalles px-3 py-2 text-sm font-semibold text-negro md:hidden"> Menú </button>
+
+
+            </div>
+
+            <nav class="w-full md:ml-30rem md:w-auto" aria-label="Principal">
+                <ul id="menu" class="hidden font-titulos font-semibold space-y-1 pb-2 md:flex md:gap-8 md:space-y-0 md:pb-0">
+                    <li><a href="#inicio" class="linea block py-2">PAÍSES</a></li>
+                    <li><a href="#novedades" class="linea block py-2">NOVEDADES</a></li>
+                    <li><a href="#dulces" class="linea block py-2">DULCES</a></li>
+                    <li><a href="#salados" class="linea block py-2">SALADOS</a></li>
+                </ul>
+            </nav>
+
+            <div class="p-2">
+                <input type="text" placeholder="Buscar" id="search-input" class="w-full max-w-xs sm:max-w-sm bg-transparent text-negro text-left rounded-full border border-detalles outline-none py-1.5 pl-15 pr-4 placeholder-gray-400 focus:ring-1 focus:ring-detalles transition-all">
+            </div>
         </div>
-
-        <nav class="w-full md:ml-30rem md:w-auto" aria-label="Principal">
-          <ul
-            id="menu"
-            class="hidden font-titulos font-semibold space-y-1 pb-2 md:flex md:gap-8 md:space-y-0 md:pb-0"
-          >
-            <li><a href="#" class="linea block py-2">PAÍSES</a></li>
-            <li><a href="#" class="linea block py-2">NOVEDADES</a></li>
-            <li><a href="#" class="linea block py-2">DULCES</a></li>
-            <li><a href="#" class="linea block py-2">SALADOS</a></li>
-          </ul>
-        </nav>
-
-        <div class="p-2">
-          <input
-            type="text"
-            placeholder="Buscar"
-            id="search-input"
-            class="w-full max-w-xs sm:max-w-sm bg-transparent text-blanco text-left rounded-full border border-detalles outline-none py-1.5 pl-30 pr-4 placeholder-gray-400 focus:ring-1 focus:ring-detalles transition-all"
-          />
-        </div>
-      </div>
     </header>
 
     <main>
-      <section id="inicio" class="relative">
-        <img
-          src="MEDIA/IMG/portada.webp"
-          alt="Dulces y salados latinos"
-          class="h-[88vh] min-h-[420px] w-full object-cover"
-        />
-        <div
-          class="absolute inset-y-0 left-0 flex w-full items-center bg-gradient-to-r from-negro/90 via-negro/70 to-transparent"
-        >
-          <div class="px-6 text-blanco lg:px-10">
-            <h1 class="font-logo text-3xl font-bold md:text-6xl">
-              El sabor de Latinoamérica
-            </h1>
-            <p class="mt-3 max-w-md text-sm md:text-lg">
-              Descubre los sabores que nos hacen sentir como en casa. Aquí
-              encontrarás tus dulces, snacks y productos favoritos de
-              Latinoamérica sin salir de España.
-            </p>
-            <a
-              href="#novedades"
-              class="mt-5 inline-block rounded-full bg-acento px-5 py-2 font-semibold transition-colors duration-300 hover:bg-detalles"
-              >Ver novedades</a
-            >
-          </div>
-        </div>
-      </section>
+        <section id="inicio" class="relative">
+            <img src="MEDIA/IMG/portada.webp" alt="Dulces y salados latinos" class="h-[calc(100vh-11rem)] min-h-[420px] w-full object-cover">
+    
+            <div class="absolute inset-y-0 left-0 flex w-full items-center bg-gradient-to-r from-negro/90 via-negro/70 to-transparent">
+                <div class="px-6 text-blanco lg:px-10">
+                    <h1 class="font-logo text-3xl font-bold md:text-6xl">El sabor de Latinoamérica
+                    </h1>
+                    <p class="mt-3 max-w-md text-sm md:text-lg">Descubre los sabores que nos hacen sentir como en casa. Aquí encontrarás tus dulces, snacks y productos favoritos de Latinoamérica sin salir de España.
+                    </p>
+                    <p class="mt-3 max-w-md text-sm">C. de Chile, 3, Chamartín | 10:00 a 20:00</p>
+                    <a href="#novedades" class="mt-5 inline-block rounded-full border-2 border-detalles bg-transparent px-5 py-2 font-semibold text-blanco transition-colors duration-300 hover:bg-detalles hover:text-blanco">Ver novedades</a>
+                </div>
+            </div>
+        </section>
 
-      <section class="border-b border-borde bg-blanco">
-        <div
-          class="mx-auto grid max-w-screen-2xl grid-cols-2 px-6 sm:grid-cols-4 lg:px-10"
-        >
-          <a href="#" class="">
-            <img src="MEDIA/IMG/chile.webp" alt="Bandera pais" class="" />
-            <span class="">CHL</span>
-          </a>
-        </div>
-      </section>
+        <section id="paises">
+            <div class="mx-auto grid max-w-screen-2xl grid-cols-3 px-6 sm:grid-cols-6 lg:px-10">
 
-      <section id="novedades"></section>
+                <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l sm:first:border-l-0">
+                    <img src="MEDIA/IMG/chile.webp" alt="Bandera de Chile" class="h-10 w-10 rounded-sm object-cover">
+                    <span class="font-titulos text-sm font-semibold uppercase tracking-widest">CL</span>
+                </a>
 
-      <section id="dulces"></section>
+                <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l">
+                    <img src="MEDIA/IMG/peru.webp" alt="Bandera de Perú" class="h-10 w-10 rounded-sm object-cover">
+                    <span class="font-titulos text-sm font-semibold uppercase tracking-widest">PE</span>
+                </a>
 
-      <section id="salados"></section>
+                <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l">
+                    <img src="MEDIA/IMG/venezuela.webp" alt="Bandera de Venezuela" class="h-10 w-10 rounded-sm object-cover">
+                    <span class="font-titulos text-sm font-semibold uppercase tracking-widest">VE</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l">
+                    <img src="MEDIA/IMG/colombia.webp" alt="Bandera de Colombia" class="h-10 w-10 rounded-sm object-cover">
+                    <span class="font-titulos text-sm font-semibold uppercase tracking-widest">CO</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l">
+                    <img src="MEDIA/IMG/argentina.webp" alt="Bandera de Argentina" class="h-10 w-10 rounded-sm object-cover">
+                    <span class="font-titulos text-sm font-semibold uppercase tracking-widest">AR</span>
+                </a>
+
+                <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l">
+                    <img src="MEDIA/IMG/brasil.webp" alt="Bandera de Brasil" class="h-10 w-10 rounded-sm object-cover">
+                    <span class="font-titulos text-sm font-semibold uppercase tracking-widest">BR</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="novedades" class="min-h-screen">
+
+        </section>
+
+        <section id="dulces" class="min-h-screen">
+
+        </section>
+
+        <section id="salados" class="min-h-screen">
+
+        </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:px-10 border-t">
+            <div>
+                <a href="#inicio" class="flex items-center justify-center gap-3">
+                    <span class="font-logo text-xl font-bold md:text-2xl">Rincón Latino</span>
+                </a>
+            </div>
+
+            <div>
+                <h3 class="mb-4 font-titulos text-sm text-detalles font-semibold uppercase tracking-widest">Sobre nosotros</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a href="#" class="transition-colors duration-300 hover:text-detalles">Cómo llegar</a>
+                    </li>
+                    <li>
+                        <a href="#" class="transition-colors duration-300 hover:text-detalles">Productos</a>
+                    </li>
+                    <li>
+                        <a href="#novedades" class="transition-colors duration-300 hover:text-detalles">Novedades</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="mb-4 font-titulos text-detalles text-sm font-semibold uppercase tracking-widest">Contacta con nosotros</h3>
+                <div class="space-y-2 text-sm">
+                    <p>+34 613 31 84 33</p>
+                    <p>info@RincónLatino.com</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="mb-4 font-titulos text-sm text-detalles font-semibold uppercase tracking-widest">Síguenos</h3>
+
+                <div class="flex gap-3">
+                    <a href="#" title="Facebook" class="flex h-10 w-10 items-center justify-center rounded-full border border-borde transition-colors duration-300 hover:bg-detalles hover:text-blanco">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" title="Instagram" class="flex h-10 w-10 items-center justify-center rounded-full border border-borde transition-colors duration-300 hover:bg-detalles hover:text-blanco">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" title="TikTok" class="flex h-10 w-10 items-center justify-center rounded-full border border-borde transition-colors duration-300 hover:bg-detalles hover:text-blanco">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="mx-auto max-w-screen-2xl px-6 py-4 text-center text-xs  lg:px-10"> &copy; 2026 Rincón Latino. Todos los derechos reservados.</p>
+        </div>
+    </footer>
   </body>
 </html>
