@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <script>
+        if (localStorage.getItem('tema') === 'oscuro') {
+        document.documentElement.classList.add('dark');
+        }
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Rincón Latino</title>
@@ -24,13 +29,20 @@
         --font-titulos: "Concert One", serif;
         --font-textos: "Mukta Malar", sans-serif;
       }
+
+       @layer base {
+            html.dark {
+                --color-negro: #fffdf6;
+                --color-blanco: #1a1a1a;
+            }
+        }
     </style>
   </head>
 
-<body class="bg-blanco antialiased transition-colors duration-500">
+<body class="bg-blanco text-negro antialiased transition-colors duration-500">
     <header class="sticky top-0 z-20 border-b bg-blanco backdrop-blur text-negro">
         <div class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-6 px-6 py-4 lg:px-10">
-            <a href="#inicio" class="font-logo text-xl leading-tight font-bold md:text-2xl linea-titulo py-1">Rincón Latino</a>
+            <a href="#inicio" class="font-logo text-detalles text-xl leading-tight font-bold md:text-2xl linea-titulo py-1">Rincón Latino</a>
 
             <div class="flex items-center gap-5 md:order-last">
                 <div class="flex items-center gap-7 mr-2">
@@ -84,7 +96,7 @@
             </div>
         </section>
 
-        <section id="paises">
+        <section id="paises" class="border border-negro">
             <div class="mx-auto grid max-w-screen-2xl grid-cols-3 px-6 sm:grid-cols-6 lg:px-10">
 
                 <a href="#" class="flex flex-col items-center gap-3 px-6 py-6 transition-colors duration-300 hover:bg-black/5 sm:border-l sm:first:border-l-0">
@@ -119,16 +131,477 @@
             </div>
         </section>
 
-        <section id="novedades" class="min-h-screen">
+        <section id="novedades" class="mx-6 min-h-screen rounded-[25px]">
+            <h2 class="font-titulos text-[48px] mt-[50px] text-center">Novedades</h2>
 
+                <div class="mx-4 md:mx-8 lg:mx-16 bg-detalles rounded-[25px] flex max-w-screen-2xl flex-wrap justify-center gap-x-[18px] gap-y-[125px] pt-[135px] px-5 pb-10">
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px]">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/71UXicS5tUL.webp" alt="Morochas" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Morochas</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Galleta de vainilla bañada en chocolate</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€5,59 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">180gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px]">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/IMG_0616.webp" alt="Morochas" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Doña Pepa</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Galleta de vainilla bañada en chocolate y grageas</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€26,25 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">690gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px]">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/guaguitas.webp" alt="Morochas" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Guaguitas</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Malvaviscos o golosinas blandas y esponjosas con forma de bebé</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro font-titulos">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€9,03 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro font-titulos">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">300gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+            </div>  
         </section>
 
-        <section id="dulces" class="min-h-screen">
+        <section id="dulces" class="mx-6 min-h-screen">
+            <h2 class="font-titulos text-[48px] mt-[15px] text-center">TOP DULCES</h2>
 
+                <div class="mx-4 md:mx-8 lg:mx-16 flex max-w-screen-2xl flex-wrap justify-center gap-x-[18px] gap-y-[125px] pt-[135px] px-5 pb-10">
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/alfi.webp" alt="Alfi" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Alfi</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">un alfajor tipo galleta relleno de manjar y cubierto de chocolate</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€€9,95 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">200gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+                
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/princesa.webp" alt="Princesa" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Princesa</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Tradicional chocolatina peruana elaborada por Nestlé</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€4,92  EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">540gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/frac.webp" alt="Frac" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Frac</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Galletas sándwich. Dos tapas con relleno en el centro</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€2,99 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">175gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                        <div class="w-full text-center">
+                            <img src="MEDIA/IMG/criollita.webp" alt="Criollitas" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                            </div>
+
+                        <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                            <h3 class="font-titulos">Criollitas</h3>
+                            <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Galletas de vainilla con pequeños cristales de azúcar</p>
+                        </div>
+
+                        <div class="flex justify-between my-[15px]">
+                            <div>
+                                <span class="text-negro text-base">Precio</span>
+                                <p class="text-negro text-xl font-bold -mt-px">€4,92 EUR</p>
+                            </div>
+                            <div>
+                                <span class="text-negro text-base">Peso</span>
+                                <p class="text-negro text-xl font-bold -mt-px">175gr</p>
+                            </div>
+                        </div>
+                        <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                        <div class="w-full text-center">
+                            <img src="MEDIA/IMG/la-iberica-mini-milky.webp" alt="Mini Milky" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                            </div>
+
+                        <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                            <h3 class="font-titulos">Mini Milky</h3>
+                            <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Línea de barras y tabletas de chocolate con leche</p>
+                        </div>
+
+                        <div class="flex justify-between my-[15px]">
+                            <div>
+                                <span class="text-negro text-base">Precio</span>
+                                <p class="text-negro text-xl font-bold -mt-px">€17,40 EUR</p>
+                            </div>
+                            <div>
+                                <span class="text-negro text-base">Peso</span>
+                                <p class="text-negro text-xl font-bold -mt-px">200gr</p>
+                            </div>
+                        </div>
+                        <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                        <div class="w-full text-center">
+                            <img src="MEDIA/IMG/morocha.webp" alt="Morocha" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                            </div>
+
+                        <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                            <h3 class="font-titulos">Morocha</h3>
+                            <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Galletas crujientes bocaditos recubiertos de chocolate</p>
+                        </div>
+
+                        <div class="flex justify-between my-[15px]">
+                            <div>
+                                <span class="text-negro text-base">Precio</span>
+                                <p class="text-negro text-xl font-bold -mt-px">€5,99 EUR</p>
+                            </div>
+                            <div>
+                                <span class="text-negro text-base">Peso</span>
+                                <p class="text-negro text-xl font-bold -mt-px">150gr</p>
+                            </div>
+                        </div>
+                        <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                        <div class="w-full text-center">
+                            <img src="MEDIA/IMG/pinguino.webp" alt="pingüino" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                            </div>
+
+                        <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                            <h3 class="font-titulos">Pingüino</h3>
+                            <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Pastelitos rellenos de crema y cubiertos de chocolate</p>
+                        </div>
+
+                        <div class="flex justify-between my-[15px]">
+                            <div>
+                                <span class="text-negro text-base">Precio</span>
+                                <p class="text-negro text-xl font-bold -mt-px">€2,60 EUR</p>
+                            </div>
+                            <div>
+                                <span class="text-negro text-base">Peso</span>
+                                <p class="text-negro text-xl font-bold -mt-px">250gr</p>
+                            </div>
+                        </div>
+                        <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                    </div>
+                </div>
         </section>
 
-        <section id="salados" class="min-h-screen">
+        <section id="salados" class="mx-6 min-h-screen">
+            <h2 class="font-titulos text-[48px] mt-[35px] text-center">TOP SALADO</h2>
 
+                <div class="mx-4 md:mx-8 lg:mx-16 flex max-w-screen-2xl flex-wrap justify-center gap-x-[18px] gap-y-[125px] pt-[135px] px-5 pb-10">
+                    <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/bembos.webp" alt="Inka Chips Bembos" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Inka Chips Bembos</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Patatas sazonadas para recrear el sabor de Bembos</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€4,92  EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">120gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+                
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/Ramitas.webp" alt="Ramitas" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Ramitas</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Palitos de harina de trigo con una forma irregular y alargada</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€7,24 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">250gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/lays pollo a la brasa.webp" alt="Lays de pollo" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Lays de pollo</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Recrean el famoso sabor del pollo a la brasa</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€3,50 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">130gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/snack mix.webp" alt="Snack Mix" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Snack Mix</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Mezcla de papas fritas, ramitas, maní y palitos salados</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€4,92  EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">540gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/camote.webp" alt="Camote chips" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Camote chips</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Hojuelas o rodajas de camote (batata) frito y crujiente</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€4,50 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">135gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/cheese tris.webp" alt="Cheese tris" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Cheese tris</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">Hecho a base de maíz inflado y cubierto con un polvo de queso</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€3,50 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">120gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+
+                <div class="group w-[295px] h-min p-[25px] bg-blanco rounded-[15px] border-[3px] border-detalles">
+                    <div class="w-full text-center">
+                        <img src="MEDIA/IMG/Chizitos.webp" alt="Chizitos" class="block h-[200px] mx-auto mt-[-150px] mb-[15px] transition-all duration-300 drop-shadow-[0_8px_8px_#13062a] group-hover:h-[240px]"/>
+                    </div>
+
+                    <div class="text-negro text-[28px] tracking-[-0.5px] -mt-[5px]">
+                        <h3 class="font-titulos">Chizitoss</h3>
+                        <p class="text-negro text-[18px] mt-px tracking-[-0.5px]">snack o aperitivo salado de maíz inflado con sabor a queso</p>
+                    </div>
+
+                    <div class="flex justify-between my-[15px]">
+                        <div>
+                            <span class="text-negro text-base">Precio</span>
+                            <p class="text-negro text-xl font-bold -mt-px">€2.50 EUR</p>
+                        </div>
+                        <div>
+                            <span class="text-negro text-base">Peso</span>
+                            <p class="text-negro text-xl font-bold -mt-px">190gr</p>
+                        </div>
+                    </div>
+                    <button class="w-full h-10 px-[18px] text-detalles font-textos font-semibold bg-transparent border-[3px] border-detalles rounded-[10px] cursor-pointer transition duration-300 hover:bg-detalles hover:text-blanco hover:scale-[1.07] hover:translate-y-[5px]"> Añadir al carrito</button>
+                </div>
+        </section>
+
+        <section>
+            <dic class="carousel">
+                <div class="infinite">
+                    <div class="cont">
+                        <img src="MEDIA/IMG/ambrosoli.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/costa.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/arcor.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/colombina.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/bauducco.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/nestle.webp">
+                    </div>
+                </div>
+                <div aria-hidden="true" class="infinite">
+                    <div class="cont">
+                        <img src="MEDIA/IMG/ambrosoli.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/costa.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/arcor.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/colombina.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/bauducco.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/nestle.webp">
+                    </div>
+                </div>
+                <div aria-hidden="true" class="infinite">
+                    <div class="cont">
+                        <img src="MEDIA/IMG/ambrosoli.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/costa.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/arcor.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/colombina.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/bauducco.webp">
+                    </div>
+                    <div class="cont">
+                        <img src="MEDIA/IMG/nestle.webp">
+                    </div>
+                </div>
+            </dic>
         </section>
     </main>
 
